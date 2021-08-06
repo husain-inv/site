@@ -1,0 +1,260 @@
+:root {
+  --background-color: #ff1c44;
+  --tabs-height: 42px;
+}
+
+/*------------------------
+    RESPONSIVE BREAKPOINT
+-------------------------*/
+/* ukuran deskto */
+@media screen and (max-width: 2560px) {
+  .container1 {
+    height: 60px;
+  }
+
+  .row {
+    width: 15%;
+  }
+
+  .row a {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container1 {
+    height: 40px;
+  }
+
+  .row {
+    width: 15%;
+  }
+
+  .row a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container1 {
+    height: 30px;
+  }
+
+  .row {
+    width: 15%;
+  }
+
+  .row a {
+    font-size: 15px;
+  }
+}
+
+/* ----------
+ukuran tablet 
+------------*/
+/* tablet */
+@media screen and (max-width: 768px) {
+  .top-header {
+    display: none;
+  }
+
+  .container1 {
+    height: 25px;
+  }
+
+  .row {
+    width: 20%;
+  }
+
+  .row a {
+    font-size: 15px;
+  }
+
+  /* sidebar */
+  .sidebar {
+    display: none;
+  }
+
+  /* nav menu bottom */
+  .container-2 {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    padding-bottom: px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .tabs-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 75px;
+    transform: translateY(75px);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .tabs {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: var(--tabs-height);
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 3px 4px rgba(242, 7, 46, 0.679);
+  }
+
+  .tab {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 100%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    transform: translateY(7px);
+    opacity: 0.85;
+    transition: background 200ms, transform 450ms, opacity 300ms;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon i {
+    color: #ffa8b8;
+    font-size: 15px;
+  }
+
+  .tab label {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #fff;
+    pointer-events: none;
+    user-select: none;
+    transform: translateY(-8px);
+    transition: opacity 150ms, transform 300ms;
+    margin-top: 2px;
+    opacity: 0;
+  }
+
+  .bubble-container {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+  }
+
+  .bubble {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: scale(1, 0) translateY(-25%);
+    transition: transform 200ms ease-out;
+    transform-origin: bottom;
+    text-decoration: none;
+  }
+
+  .bubble-path {
+    fill: var(--background-color);
+  }
+
+  /*---anim classes-------------------*/
+  .tab.hover .icon {
+    transform: scale(1.2) translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.241);
+    opacity: 1;
+  }
+
+  .tab.hover label {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+  /* arrow */
+
+  div.tab-arrow {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-2.5px);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  div.tab-arrow:hover {
+    transform: translateY(-45px);
+    opacity: 0;
+    width: fit-content;
+    transition: all 0.7s ease-in-out;
+  }
+
+  div.tab-arrow:hover + .tabs-container {
+    transform: translateY(-5px);
+  }
+
+  .tabs-container:hover {
+    z-index: 2;
+    transform: translateY(-5px);
+  }
+
+  .arrow-item {
+    list-style-type: none;
+    width: 40px;
+    justify-content: center;
+  }
+
+  .arrow-item i {
+    position: relative;
+    color: #ffa8b8;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ukuran mobile S, M dan L*/
+@media screen and (max-width: 320px) {
+  .container1 {
+    height: 25px;
+  }
+
+  .row {
+    width: 45%;
+  }
+
+  .row a {
+    font-size: 15px;
+  }
+
+  .container-2 {
+    align-items: flex-end;
+    transform: translateY(0.5%);
+  }
+
+  .tabs-container {
+    transform: scale(0.75);
+  }
+}

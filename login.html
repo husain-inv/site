@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LOGIN</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- link -->
+  <link rel="icon" href="images/1.png">
+  <link rel="stylesheet" type="text/css" href="css/style-login.css">
+  <link rel="stylesheet" type="text/css" href="font/Font-Awesome-master/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="font/Font-Awesome-master/css/all.css">
+  <link rel="stylesheet" type="text.css" href="font/iconic/material-design-iconic-font.css">
+  <!-- link end -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <img src="images/LOGO R.png">
+      <h1>LOGIN</h1>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form class="form-horizontal" method="" action="">
+              <div class="form-grub">
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" value="" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-grub">
+                <div class="col-md-6">
+                  <input type="password" id="password-field" class="form-control" name="password" value=""
+                    placeholder="Password" onfocus="hideeye()">
+                  <span id="eye" class="fa fa-eye-slash field-icon" onclick="myPassword()"></span>
+                </div>
+              </div>
+              <div class="submit">
+                <input type="submit" id="submit" name="submit" value="Login">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- service for JS -->
+  <script>
+    function myPassword() {
+      var x = document.getElementById("password-field");
+      var y = document.getElementById("eye");
+
+      if (x.type == "password") {
+        x.type = "text";
+        y.className = "fa fa-eye";
+      } else {
+        x.type = "password";
+        y.className = "fa fa-eye-slash";
+      }
+    };
+
+    // var x = document.getElementById("eye");
+    // x.addEventListener("focus", myFocusFuntion, true);
+    // x.addEventListener("blur", myBlurFuntion, true);
+
+    // function myFocusFuntion() {
+    //   x.style.display = "hide";
+    // }
+    // function myBlurFuntion() {
+    //   x.style.display = "";
+    // };
+
+    // function hideeye() {
+    //   if (x.style.display === "none") {
+    //     x.style.display = "block";
+    //   } else {
+    //     x.style.display = "none";
+    //   }
+    // };
+  </script>
+  <!-- end -->
+</body>
+
+</html>
